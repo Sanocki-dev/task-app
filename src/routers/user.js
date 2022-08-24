@@ -127,7 +127,7 @@ const upload = multer({
 router.post(
   "/user/me/avatar",
   auth,
-  upload.single("upload"),
+  upload.single("avatar"),
   async (req, res) => {
     // Reformats the photo to png and resizes it
     const buffer = await sharp(req.file.buffer)
